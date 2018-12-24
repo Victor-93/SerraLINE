@@ -1,0 +1,29 @@
+____________________________________________________________________________
+
+                              SERRALINE
+____________________________________________________________________________
+
+ COMPILATION
+____________________________________________________________________________
+
+ To compile SerraLINE type: make SerraLINE
+
+ If you wish, you can set up flags and the compiler by modifying the Makefile.
+
+____________________________________________________________________________
+
+ USAGE
+____________________________________________________________________________
+
+ To run SerraLINE, you must modify the input file "s_line.in", writing the
+ locations of the topology and trajectory files. These files must be output
+ of WrLINE.
+
+ Once s_line.in is ready, to run SerraLINE type: ./SerraLINE < s_line.in
+
+ This will generate an output file "bending_parameters.out", containing the
+ averages and standard deviations at all possible lengths.
+ 
+____________________________________________________________________________
+
+24/12/2018

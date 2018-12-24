@@ -1,0 +1,24 @@
+c Input file for SerraLINE                              
+c Lines beginning with "c" are comment lines.
+c Always leave one empty line before entering a parameter.
+c First indicate if the structure to be analysed is a closed or open structure,
+c then the directory of the topology file and trajectory file. Do not change
+c the order of inputs.
+c------------------------------------------------------------------------------
+c Indicate if the structure to be analysed is a circle (closed) or linear (open)
+c Write 0 for opened structure and 1 for closed
+
+   1
+c -------------------------------------------
+c Topology file. The file must be an amber topology file.                                       
+c                                          
+
+   amber_topology.prmtop
+c -------------------------------------------
+c Trajectory file. The file must be an amber trajectory file.                                         
+c                                          
+
+   amber_trajectory.crd
+c
+c No more inputs to read
+c end
