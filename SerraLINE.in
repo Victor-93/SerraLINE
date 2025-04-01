@@ -1,0 +1,66 @@
+c Input file for SerraLINE
+c Lines beginning with "c" are comment lines.
+c Always live one line before entering a parameter.
+c------------------------------------------------------------------------------
+c Indicate if the structure to be analysed is a circle (closed) or linear (open)
+c Write 0 for opened structure and 1 for closed
+
+   1
+c -------------------------------------------
+c Even if WrLINE only analyses double-stranded structures, please specify
+c if the DNA to be analysed has a topology that takes into account both
+c strands (double-stranded), only one strand (single-stranded) or if
+c you don't have a topology which will result in the same results but without
+c sequence.
+c Type 1 for single stranded, 2 for double stranded DNA or 0 if topology
+c is not being provided (if 0 then the topology input will be ignored).
+
+  2
+c -------------------------------------------
+c If last entry was 0, then indicate the number of bases.
+c If last entry was different than 0, this input will be ignored
+c (but do not erase the whole line).
+c
+
+  336
+c -------------------------------------------
+c - If you want to fit the best plane for all bps, type 0
+c - If you do not want to perform any fitting, type 1 
+c - If you want to fit the plane for some particular base-pairs, write 'i:j'
+c - To indicate bp that are not consecutive, write  as ' 2, 3, 12, 34, 100, ...'
+c - You can also indicate several chunks: 'i:j, s:p, ...'
+c - In case there are many bps, you can use another line using the & symbol:
+c - Do not use the symbol & after a comma ( , &)
+c - Finally, to perform any fitting you should indicate at least 3 bps
+
+   0
+c -------------------------------------------
+c Tangent vectors point in the direction of bp i to bp i+l
+c Please type l which must be: l > 0 and l < N-1 for closed structures
+c and l < N-2 for opened structures (N -> number of bases/elements).
+c With l=1, the vectors are tangent to the contour.
+c Howver, experiments might have lower resolution so l can be > 1.
+c NOTE: for linear structures, l elements will be lost #?
+
+   1
+c -------------------------------------------
+c Topology file                                         
+c                                          
+
+   test.prmtop
+c -------------------------------------------
+c Trajectory file                                         
+c                                          
+
+   C1.xyz
+c -------------------------------------------
+c In case the projection method was selected:
+c Type 1 if you want to print the projected trajectory and 0 if not.
+c This input will be ignored if the projection is not performed
+c Additionally, you can specify the format (either xyz or crd)
+c Like: 1, xyz      or 1, crd     
+
+  1, xyz
+c -------------------------------------------
+c No more inputs to read
+c end
